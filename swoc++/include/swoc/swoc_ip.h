@@ -1105,7 +1105,7 @@ inline auto IP6Addr::operator = (sockaddr_in6 const* addr) -> self_type & {
   if (addr) {
     return *this = addr->sin6_addr;
   }
-  this->clear();
+  return this->clear();
 }
 
 inline IP6Addr &
